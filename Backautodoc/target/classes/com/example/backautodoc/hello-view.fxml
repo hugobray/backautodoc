@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.backautodoc.HelloController" spacing="10" alignment="CENTER">
+
+
+    <!-- Sélection de la marque -->
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Marque : " />
+        <ComboBox fx:id="marqueComboBox" />
+    </HBox>
+
+    <!-- Section des catégories -->
+    <HBox alignment="CENTER" spacing="20">
+        <!-- Freins -->
+        <VBox alignment="CENTER" spacing="10">
+            <CheckBox fx:id="freinsCheckBox" text="Freins" />
+            <Label fx:id="freinsPriceLabel" text="Prix Unitaire: 200 €" />
+            <HBox alignment="CENTER" spacing="10">
+                <Button fx:id="freinsMinusButton" text="-" />
+                <Label fx:id="freinsQtyLabel" text="Quantité: 0" />
+                <Button fx:id="freinsPlusButton" text="+" />
+            </HBox>
+
+        </VBox>
+
+        <!-- Huile -->
+        <VBox alignment="CENTER" spacing="10">
+            <CheckBox fx:id="huileCheckBox" text="Huile" />
+            <Label fx:id="huilePriceLabel" text="Prix Unitaire: 6 €" />
+            <HBox alignment="CENTER" spacing="10">
+                <Button fx:id="huileMinusButton" text="-" />
+                <Label fx:id="huileQtyLabel" text="Quantité: 0" />
+                <Button fx:id="huilePlusButton" text="+" />
+            </HBox>
+
+        </VBox>
+
+        <!-- Filtres -->
+        <VBox alignment="CENTER" spacing="10">
+            <CheckBox fx:id="filtresCheckBox" text="Filtres" />
+            <Label fx:id="filtresPriceLabel" text="Prix Unitaire: 10 €" />
+            <HBox alignment="CENTER" spacing="10">
+                <Button fx:id="filtresMinusButton" text="-" />
+                <Label fx:id="filtresQtyLabel" text="Quantité: 0" />
+                <Button fx:id="filtresPlusButton" text="+" />
+            </HBox>
+
+        </VBox>
+    </HBox>
+
+    <!-- Section du prix final -->
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Prix Final : " />
+        <Label fx:id="prixFinalLabel" text="0 €" />
+    </HBox>
+
+    <!-- Bouton Commander -->
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="commanderButton" text="Commander" />
+    </HBox>
+
+</VBox>
+
+
